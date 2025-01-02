@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 
 void bubble_sort(std::vector<int>& arr)
@@ -19,13 +18,3 @@ void bubble_sort(std::vector<int>& arr)
     }
 }
 
-std::vector<int> a = {99,423,20,-10,35,0,-1,3,-120,55,32};
-
-int main()
-{
-    bubble_sort(a);
-    for(int i = 0; i<a.size(); i++){
-        std::cout<<a[i]<<" ";
-    }
-    return 0;
-}
