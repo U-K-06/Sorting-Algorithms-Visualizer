@@ -18,7 +18,6 @@ void bubble_sort(std::vector<int>& arr)
     }
 }
 
-
 void insertion_sort(std::vector<int>& arr)
 {
     for(int i  = 1;i<arr.size();i++)
@@ -34,6 +33,25 @@ void insertion_sort(std::vector<int>& arr)
         arr[j+1] = compared;
     }
     }
+
+void selection_sort(std::vector<int>& arr)
+{
+    for(int i = 0;i<arr.size()-1;i++)
+    {
+        int cur_min = i;
+        for(int j = i+1;j<arr.size();j++)
+        {
+            if (arr[j]<arr[cur_min])
+            {
+                cur_min = j;
+            }
+        }
+        int temp = arr[cur_min];
+        arr[cur_min] = arr[i];
+        arr[i] = temp;
+    }
+}
+
 
 
 

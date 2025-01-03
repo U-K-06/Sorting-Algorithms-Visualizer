@@ -24,3 +24,19 @@ Following sorting algorithms can currently be visualised:
 -  **Merge Sort**
 
 -  **Quick Sort**
+
+-  **Bogo Sort**
+
+## Installation
+
+To run the visualizer, you need to have the following installed on your system:
+
+- **Python interpretor**
+
+- **C++ Compiler**
+
+Then open your terminal and install the **required Python libraries** using the following command while being in the project directory:
+
+```bash
+pip install -r requirements.txt
+```
