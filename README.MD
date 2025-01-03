@@ -8,9 +8,18 @@
 
 **Files** and **Directories** within the project are listed below:
 
-- **`Algorithms`**: Contains the implementation of different sorting algorithms and sending of the data to the python Files.
+- **`Algorithms_and_Array_Building`**: Contains the implementation of different sorting algorithms and sending of the data to the python Files.
+
+- **`Algorithms.cpp`**: Contains the implementation of different sorting algorithms.
+
+- **`process_data.cpp`**: Contains the implementations of Process data during sorting and sending it to the python files.
+
+- **`sned_data.cpp`** : Contains the implementation of sending data to the python files.
+
 
 - **`Graph_Generation`**: Contains the Python script for generating plots.
+
+- **`data.csv`**: Contains the data of the array to be sorted.
 
 
 ## Sorting Algorithms

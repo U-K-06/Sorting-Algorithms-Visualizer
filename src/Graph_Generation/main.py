@@ -8,3 +8,5 @@ def read_and_process_data(file_path: str) -> list:
     return [i for i in data['array']]
 
 
+
+

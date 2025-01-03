@@ -43,12 +43,10 @@ void selection_sort(std::vector<int>& arr)
         {
             if (arr[j]<arr[cur_min])
             {
-                cur_min = j;
+                cur_min = j; 
             }
         }
-        int temp = arr[cur_min];
-        arr[cur_min] = arr[i];
-        arr[i] = temp;
+        std::swap(arr[i],arr[cur_min]);
     }
 }
 
