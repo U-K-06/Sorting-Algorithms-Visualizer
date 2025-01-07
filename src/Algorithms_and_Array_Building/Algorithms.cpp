@@ -1,5 +1,4 @@
 #include <vector>
-
 void bubble_sort(std::vector<int>& arr)
 {
     bool swapped = false;
@@ -10,12 +9,14 @@ void bubble_sort(std::vector<int>& arr)
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
                 swapped = true;
+                
             }
         }
         if(!swapped){
             break;
         }
     }
+
 }
 
 void insertion_sort(std::vector<int>& arr)
@@ -50,8 +51,9 @@ void selection_sort(std::vector<int>& arr)
     }
 }
 
+int partition(std::vector<int>& arr,int low,int high)
+{
+    int pivot = arr[low];
+    
 
-
-
-
-
+}
