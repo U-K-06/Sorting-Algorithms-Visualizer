@@ -1,5 +1,8 @@
 #include <vector>
-void bubble_sort(std::vector<int>& arr)
+
+#include "Algorithms.h"
+
+void Algorithms::bubble_sort(std::vector<int>& arr)
 {
     bool swapped = false;
     for(int i = 0; i<arr.size(); i++){
@@ -19,7 +22,7 @@ void bubble_sort(std::vector<int>& arr)
 
 }
 
-void insertion_sort(std::vector<int>& arr)
+void Algorithms::insertion_sort(std::vector<int>& arr)
 {
     for(int i  = 1;i<arr.size();i++)
     {
@@ -35,7 +38,7 @@ void insertion_sort(std::vector<int>& arr)
     }
     }
 
-void selection_sort(std::vector<int>& arr)
+void Algorithms::selection_sort(std::vector<int>& arr)
 {
     for(int i = 0;i<arr.size()-1;i++)
     {
@@ -51,7 +54,7 @@ void selection_sort(std::vector<int>& arr)
     }
 }
 
-int partition(std::vector<int>& arr,int low,int high)
+int Algorithm::partition(std::vector<int>& arr,int low,int high)
 {
     int pivot = arr[low];
     
