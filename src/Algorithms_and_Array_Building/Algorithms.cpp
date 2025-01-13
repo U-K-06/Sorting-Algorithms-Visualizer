@@ -54,9 +54,90 @@ void Algorithms::selection_sort(std::vector<int>& arr)
     }
 }
 
-int Algorithm::partition(std::vector<int>& arr,int low,int high)
+void Algorithms::merge(std::vector<int>& arr, int left, int mid, int right)
 {
-    int pivot = arr[low];
-    
+    int i, j, k;
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
 
+    std::vector<int> leftVec(n1), rightVec(n2);
+
+    for (i = 0; i < n1; i++)
+        leftVec[i] = arr[left + i];
+    for (j = 0; j < n2; j++)
+        rightVec[j] = arr[mid + 1 + j];
+
+    i = 0, j = 0, k = left;
+
+    while (i < n1 && j < n2) {
+        if (leftVec[i] <= rightVec[j]) {
+            arr[k] = leftVec[i];
+            i++;
+        } else {
+            arr[k] = rightVec[j];
+            j++;
+        }
+        k++;
+    }
+    
+    while (i < n1) {
+        arr[k] = leftVec[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = rightVec[j];
+        j++;
+        k++;
+    }
+}
+
+void Algorithms::merge_sort(std::vector<int>& arr, int left, int right)
+{
+    if (left < right)
+    {
+        int mid = left + (right - left) / 2;
+
+        merge_sort(arr, left, mid);
+        merge_sort(arr, mid + 1, right);
+        
+        merge(arr, left, mid, right);
+    }
+}
+
+int Algorithms::swap(int& a, int& b)
+{
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+}
+
+int Algorithms::partition(std::vector<int>& arr, int low, int high)
+{
+    int pivot = arr[high];
+    int i = (low -1);
+
+    for (int j = low; j <= high; j++)
+    {
+        if (arr[j] <= pivot) {
+            i++;
+            swap(arr[i], arr[j]);
+        }
+    }
+
+    swap(arr[i + 1], arr[high]);
+
+    return i + 1;
+}
+
+void Algorithms::quick_sort(std::vector<int>& arr, int low, int high)
+{
+    if (low < high)
+    {
+        int pi = partition(arr, low, high);
+
+        quick_sort(arr, low, pi - 1);
+        quick_sort(arr, pi + 1, high);
+    }
 }
